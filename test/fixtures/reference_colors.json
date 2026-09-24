@@ -1,0 +1,74 @@
+{
+  "light/violet": {
+    "primary-container": "#eaddff",
+    "on-primary-container": "#4f378b",
+    "secondary-container": "#e8def8",
+    "on-secondary-container": "#4a4458"
+  },
+  "light/blue": {
+    "primary-container": "#d3e5ff",
+    "on-primary-container": "#004a90",
+    "secondary-container": "#d7e4fd",
+    "on-secondary-container": "#3d495a"
+  },
+  "light/teal": {
+    "primary-container": "#c0efed",
+    "on-primary-container": "#005f51",
+    "secondary-container": "#c9ecea",
+    "on-secondary-container": "#324e4b"
+  },
+  "light/green": {
+    "primary-container": "#d5eccd",
+    "on-primary-container": "#355600",
+    "secondary-container": "#d8ead2",
+    "on-secondary-container": "#404c39"
+  },
+  "light/rose": {
+    "primary-container": "#ffd8e7",
+    "on-primary-container": "#78245d",
+    "secondary-container": "#f8dae5",
+    "on-secondary-container": "#56414b"
+  },
+  "light/amber": {
+    "primary-container": "#f8e0c2",
+    "on-primary-container": "#7a3300",
+    "secondary-container": "#f3e0c9",
+    "on-secondary-container": "#544534"
+  },
+  "dark/violet": {
+    "primary-container": "#4f378b",
+    "on-primary-container": "#eaddff",
+    "secondary-container": "#4a4458",
+    "on-secondary-container": "#e8def8"
+  },
+  "dark/blue": {
+    "primary-container": "#004a90",
+    "on-primary-container": "#d3e5ff",
+    "secondary-container": "#3d495a",
+    "on-secondary-container": "#d7e4fd"
+  },
+  "dark/teal": {
+    "primary-container": "#005f51",
+    "on-primary-container": "#c0efed",
+    "secondary-container": "#324e4b",
+    "on-secondary-container": "#c9ecea"
+  },
+  "dark/green": {
+    "primary-container": "#355600",
+    "on-primary-container": "#d5eccd",
+    "secondary-container": "#404c39",
+    "on-secondary-container": "#d8ead2"
+  },
+  "dark/rose": {
+    "primary-container": "#78245d",
+    "on-primary-container": "#ffd8e7",
+    "secondary-container": "#56414b",
+    "on-secondary-container": "#f8dae5"
+  },
+  "dark/amber": {
+    "primary-container": "#7a3300",
+    "on-primary-container": "#f8e0c2",
+    "secondary-container": "#544534",
+    "on-secondary-container": "#f3e0c9"
+  }
+}

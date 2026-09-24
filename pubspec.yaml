@@ -1,0 +1,53 @@
+name: canvas_quiz_exporter
+description: Offline Canvas quiz exports, built with Flutter for Windows.
+publish_to: none
+version: 2.1.0+2
+
+environment:
+  sdk: ^3.13.4
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  html: ^0.15.7
+  archive: ^4.3.0
+  crypto: ^3.0.7
+  path: ^1.9.1
+  pdf: ^3.13.1
+  image: ^4.10.1
+  file_selector: ^1.1.0
+  desktop_drop: ^0.8.4
+  pdfrx: ^2.6.5
+  window_manager: ^0.5.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/demo.html
+    - assets/fonts/roboto_license.txt
+    - assets/fonts/roboto-flex-license.txt
+    - assets/fonts/material-symbols-license.txt
+    - assets/fonts/pdf/
+    - assets/fonts/noto-sans-sc-license.txt
+  fonts:
+    - family: Roboto Flex
+      fonts:
+        - asset: assets/fonts/roboto-flex.ttf
+    - family: Material Symbols Rounded
+      fonts:
+        - asset: assets/fonts/material-symbols-rounded.ttf
+    - family: Noto Sans SC
+      fonts:
+        - asset: assets/fonts/noto-sans-sc.ttf
+    - family: Roboto
+      fonts:
+        - asset: assets/fonts/roboto-regular.ttf
+        - asset: assets/fonts/roboto-bold.ttf
+          weight: 700

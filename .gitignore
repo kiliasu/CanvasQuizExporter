@@ -1,0 +1,15 @@
+# Flutter generated files
+.dart_tool/
+.flutter-plugins-dependencies
+build/
+coverage/
+windows/flutter/ephemeral/
+
+# Local archive and editor files
+.trash/
+.idea/
+*.iml
+.vscode/
+.env
+.DS_Store
+Thumbs.db

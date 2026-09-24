@@ -1,0 +1,24 @@
+name: Bug report / 问题反馈
+description: Report an export, layout, or startup problem.
+body:
+  - type: markdown
+    attributes:
+      value: Do not upload real course pages, names, emails, tokens, or private screenshots. Use a synthetic example whenever possible.
+  - type: input
+    id: version
+    attributes:
+      label: Version and Windows version
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps and expected result
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: Actual result and redacted error message
+    validations:
+      required: true

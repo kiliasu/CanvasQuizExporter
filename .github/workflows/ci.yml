@@ -1,0 +1,27 @@
+name: Flutter Windows
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      - name: Install verified Flutter SDK
+        shell: pwsh
+        run: |
+          $zip = Join-Path $env:RUNNER_TEMP 'flutter.zip'
+          $metadata = Invoke-RestMethod 'https://storage.googleapis.com/flutter_infra_release/releases/releases_windows.json'
+          $release = $metadata.releases | Where-Object { $_.version -eq '3.47.5' -and $_.channel -eq 'stable' -and $_.dart_sdk_arch -eq 'x64' } | Select-Object -First 1
+          if (-not $release) { throw 'Pinned Flutter SDK not found' }
+          Invoke-WebRequest ($metadata.base_url + '/' + $release.archive) -OutFile $zip
+          if ((Get-FileHash $zip -Algorithm SHA256).Hash.ToLowerInvariant() -ne '0ccd71931f49c2fbe394b1eeb6d79af3d624058a043ea0d03d34160581624fb8') { throw 'SDK hash mismatch' }
+          $destination = Join-Path $env:RUNNER_TEMP 'flutter-sdk'
+          Expand-Archive -LiteralPath $zip -DestinationPath $destination
+          (Join-Path $destination 'flutter/bin') | Out-File $env:GITHUB_PATH -Append -Encoding utf8
+      - name: Build and verify
+        shell: pwsh
+        run: ./tool/build_windows.ps1
